@@ -1,1 +1,3 @@
-Projeto do curso com spring 
+Projeto 
+
+- Criação de um site para realizar compras de ingresso para cinema
