@@ -13,18 +13,10 @@ import br.com.caelum.ingresso.model.Lugar;
 import br.com.caelum.ingresso.model.Sala;
 
 public class SalaForm {
+	
 	private Integer salaId;
 	@NotNull
-	private BigDecimal preco;
-
-	public BigDecimal getPreco() {
-		return preco;
-	}
-
-	public void setPreco(BigDecimal preco) {
-		this.preco = preco;
-	}
-
+	private BigDecimal preco= BigDecimal.ZERO;
 	@NotBlank
 	private String nome;
 
@@ -38,6 +30,14 @@ public class SalaForm {
 		this.nome = sala.getNome();
 		this.lugares = new ArrayList<>(sala.getLugares());
 		this.preco = sala.getPreco();
+	}
+
+	public BigDecimal getPreco() {
+		return preco;
+	}
+
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
 	}
 
 	public Integer getSalaId() {
