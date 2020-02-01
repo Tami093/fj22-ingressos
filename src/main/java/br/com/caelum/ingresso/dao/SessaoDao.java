@@ -30,4 +30,12 @@ public class SessaoDao {
 				.setParameter("filme", filme).getResultList();
 	}
 
+	public void delete(Integer id) {
+		manager.remove(findOne(id));
+	}
+
+	public Sessao findOne(Integer id) {
+		return manager.find(Sessao.class, id);
+	}
+
 }
